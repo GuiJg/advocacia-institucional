@@ -271,17 +271,22 @@
 }
 
 .carousel-image {
-  max-width: 400px;
+  width: 100%;
   height: auto;
   margin: 0 auto;
 }
-:host ::ng-deep .p-carousel {
-  max-width: 500px;
+
+::ng-deep .p-carousel {
+  width: 25rem;
   margin: 0 auto;
 }
 
-:host ::ng-deep .p-carousel .p-carousel-content .p-carousel-item {
+::ng-deep .p-carousel .p-carousel-content .p-carousel-item {
   flex: 0 0 50%;
+}
+
+::ng-deep .p-icon-wrapper {
+  color: #fff;
 }
 
 .image-container {
