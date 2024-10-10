@@ -179,20 +179,20 @@ export class HomeComponent implements OnInit, AfterViewInit {
       if (this.satisfactionCount == 100) {
         clearInterval(this.satisfactionCountStop);
       }
-    }, 35);
+    }, 30);
 
     this.successCountStop = setInterval(() => {
       this.successCount++;
       if (this.successCount == 700) {
         clearInterval(this.successCountStop);
       }
-    }, 5);
+    }, 3);
 
     this.servicesStop = setInterval(() => {
       this.servicesCount++;
       if (this.servicesCount == 5) {
         clearInterval(this.servicesStop);
       }
-    }, 1000);
+    }, 700);
   }
 }

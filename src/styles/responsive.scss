@@ -46,14 +46,6 @@
     transform: translateY(-6rem);
   }
 
-  .chevrons {
-    width: 23px;
-  }
-
-  .scrolldown-services {
-    transform: translate(33rem, 5rem) !important;
-  }
-
   .menubar {
     display: none;
   }
@@ -138,9 +130,7 @@
 }
 
 @media screen and (max-width: 875px) {
-  .scrolldown-services {
-    transform: translate(20rem, 5rem) !important;
-  }
+  
 
   .socios-image {
     position: relative; /* Necessário para o pseudo-elemento */
@@ -189,12 +179,13 @@
 }
 
 @media screen and (max-width: 425px) {
-  .scrolldown-services {
-    transform: translate(13rem, 5rem) !important;
-  }
 
   .banner-mid {
     margin: 1rem !important;
+  }
+
+  .title-service-banner div {
+    width: 100%;
   }
 
   .btn-contact {

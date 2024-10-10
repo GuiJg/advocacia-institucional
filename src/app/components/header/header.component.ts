@@ -1,4 +1,10 @@
-import { Component, ElementRef, HostListener, Renderer2, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 import { Sidebar } from 'primeng/sidebar';
@@ -8,7 +14,6 @@ import { Sidebar } from 'primeng/sidebar';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss', '/src/styles/responsive.scss'],
 })
-
 export class HeaderComponent {
   @ViewChild('sidebar') sidebar?: Sidebar;
   public isScrolled = false;
@@ -19,7 +24,7 @@ export class HeaderComponent {
 
   constructor(
     public router: Router,
-    private el: ElementRef, 
+    private el: ElementRef,
     private renderer: Renderer2
   ) {
     this.areasDeAtuacaoMenu = [
@@ -40,20 +45,34 @@ export class HeaderComponent {
         items: [
           {
             label: 'Direito da Familia e Sucessões',
-
+            command: () => {
+              this.router.navigate(['/servicos']);
+            },
           },
           {
             label: 'Direito Imobiliário',
+            command: () => {
+              this.router.navigate(['/servicos']);
+            },
           },
           {
             label: 'Direito Bancário',
+            command: () => {
+              this.router.navigate(['/servicos']);
+            },
           },
           {
             label: 'Direito Previdênciario',
+            command: () => {
+              this.router.navigate(['/servicos']);
+            },
           },
           {
             label: 'Direito Trabalhista',
-          }
+            command: () => {
+              this.router.navigate(['/servicos']);
+            },
+          },
         ],
         command: () => {
           this.router.navigate(['/servicos']);
@@ -70,14 +89,17 @@ export class HeaderComponent {
         command: () => {
           this.router.navigate(['/contato']);
         },
-      }
+      },
     ];
-
   }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    const scrollPosition =
+      window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      0;
     if (scrollPosition > 50) {
       this.isScrolled = true;
     } else {
@@ -93,5 +115,4 @@ export class HeaderComponent {
   onSidebarHide() {
     this.isMenuOpen = false;
   }
-
 }
