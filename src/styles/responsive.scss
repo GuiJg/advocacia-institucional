@@ -1,0 +1,207 @@
+@media screen and (max-width: 1273px) {
+  .cards-services-container {
+    margin: 5rem 2rem 5rem 4rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    padding: 1rem 2rem 1rem 2rem !important;
+  }
+
+  .bg-black {
+    padding: 0.5rem 2rem 0.5rem 2rem !important;
+  }
+
+  .logo-width {
+    width: 8rem !important;
+    transition: all 0.3s ease;
+
+    .logo1 {
+      display: none;
+    }
+
+    .logo2 {
+      display: flex;
+      width: 3rem;
+    }
+  }
+
+  .logo-header {
+    width: 6rem !important;
+  }
+
+  .logo2 {
+    display: none;
+  }
+
+  .banner-video {
+    width: 100% !important;
+    height: 50vh !important;
+  }
+
+  .scrolldown {
+    width: 23px;
+    height: 35px;
+    transform: translateY(-6rem);
+  }
+
+  .chevrons {
+    width: 23px;
+  }
+
+  .scrolldown-services {
+    transform: translate(33rem, 5rem) !important;
+  }
+
+  .menubar {
+    display: none;
+  }
+
+  .text-about {
+    width: 100% !important;
+  }
+
+  #about {
+    padding: 2rem !important;
+  }
+
+  .about-home-text {
+    width: 100% !important;
+  }
+
+  .width-responsive-about {
+    width: 74% !important;
+  }
+
+  .container-card {
+    width: 100% !important;
+  }
+
+  .cards-services-container {
+    justify-content: center !important;
+    margin: 5rem 2rem 5rem 2rem;
+  }
+
+  .cards {
+    width: 30rem;
+  }
+
+  .services {
+    flex-direction: column !important;
+    gap: 3rem !important;
+
+    button {
+      width: 50% !important;
+    }
+  }
+
+  .banner-mid {
+    justify-content: center !important;
+    gap: 3rem !important;
+    padding: 3rem !important;
+    margin: 3rem !important;
+  }
+
+  .banner-width-mid {
+    align-items: center !important;
+    text-align: center;
+    width: 100% !important;
+  }
+
+  .title-about-page {
+    flex-direction: column-reverse !important;
+    gap: 3rem !important;
+    margin: 3rem !important;
+  }
+
+  .about-image {
+    width: 100% !important;
+  }
+
+  .about-title-responsive {
+    width: 100% !important;
+  }
+
+  .about-page {
+    padding: 3rem !important;
+  }
+
+  footer {
+    flex-direction: column !important;
+    gap: 3rem !important;
+  }
+
+  #footer-logo {
+    width: 30% !important;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  .scrolldown-services {
+    transform: translate(20rem, 5rem) !important;
+  }
+
+  .socios-image {
+    position: relative; /* Necessário para o pseudo-elemento */
+    overflow: hidden; /* Para esconder partes do pseudo-elemento que saem do contêiner */
+  }
+
+  .socios-image img {
+    display: block; /* Remove espaços em branco abaixo da imagem */
+    width: 20rem; /* Ajusta a largura da imagem ao contêiner */
+  }
+
+  .socios-image::after {
+    content: ""; /* Necessário para criar um pseudo-elemento */
+    position: absolute; /* Posiciona o gradiente sobre a imagem */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to top,
+      #000000dd,
+      #0000003c,
+      #00000000
+    ); /* Gradiente escuro */
+  }
+
+  .socios-title {
+    gap: 1rem;
+    transform: translateY(15rem);
+    opacity: 1;
+  }
+
+  .container-contact {
+    margin: 5rem 1rem 1rem 0;
+  }
+
+  .container-form {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  :host ::ng-deep .p-sidebar-right {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .scrolldown-services {
+    transform: translate(13rem, 5rem) !important;
+  }
+
+  .banner-mid {
+    margin: 1rem !important;
+  }
+
+  .carousel {
+    display: none;
+  }
+
+  .btn-contact {
+    width: 80% !important;
+  }
+}

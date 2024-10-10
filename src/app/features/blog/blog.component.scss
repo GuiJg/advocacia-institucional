@@ -1,0 +1,52 @@
+.developing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 5rem;
+  z-index: 100;
+  opacity: 1;
+  background-color: #002145;
+  h1,
+  h2 {
+    font-size: 3rem;
+    color: #fff;
+  }
+
+  p {
+    margin: 1rem 0 1rem 0;
+    color: #fff;
+
+    strong {
+      color: #dba33b;
+    }
+  }
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.social-link {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-10px);
+}
+
+.btn-blog {
+  font-weight: 500;
+  background-color: #dba33b;
+  border: none;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #c8922e;
+  }
+}

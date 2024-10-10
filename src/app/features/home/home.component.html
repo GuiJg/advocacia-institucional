@@ -1,0 +1,355 @@
+<div
+  class="main-banner flex flex-column justify-content-center align-items-center"
+>
+  <video
+    #bannerVideo
+    class="banner-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+  >
+    <source src="assets/banner-video.mp4" type="video/mp4" />
+  </video>
+  <a href="#about" class="scrolldown" style="--color: white">
+    <div class="chevrons">
+      <div class="chevrondown"></div>
+      <div class="chevrondown"></div>
+    </div>
+  </a>
+</div>
+
+<div
+  class="flex flex-wrap justify-content-center align-items-center gap-6 p-8 pt-3"
+  id="about"
+>
+  <div class="about-image">
+    <img
+      src="assets/banner-about.png"
+      alt="Grupo de advogados com prédios atrás"
+      class="border-1 border-yellow-500"
+    />
+  </div>
+  <div class="about-home-text w-5">
+    <p>Sobre Nós</p>
+    <h3>Nós Sempre Fazemos o Melhor!</h3>
+    <br />
+    <p>
+      Um escritório de advocacia especializado em fornecer soluções jurídicas
+      rápidas, eficientes e personalizadas, atuando em todo o Brasil. Com uma
+      equipe composta por advogados especialistas e mestres em diversas áreas do
+      direito, oferecemos serviços de excelência tanto para pessoas físicas
+      quanto jurídicas. Nosso diferencial é a busca constante pela conciliação e
+      resolução de conflitos antes de chegar ao âmbito judicial, garantindo
+      assim uma abordagem preventiva e estratégica para nossos clientes.
+    </p>
+    <button
+      pButton
+      type="button"
+      label="Saiba mais"
+      routerLink="/sobre"
+      class="flex justify-content-center align-items-center gap-2 mt-5 p-3 btn-home"
+    >
+      <i class="pi pi-angle-right"></i>
+    </button>
+  </div>
+</div>
+
+<div
+  class="flex flex-wrap justify-content-center align-items-center gap-4 p-4 services"
+>
+  <div
+    class="flex flex-column align-items-start gap-4 w-5 width-responsive-about"
+  >
+    <div class="flex flex-column flex-wrap align-items-start gap-4">
+      <h1>Por que nos escolher?</h1>
+      <p>
+        Um escritório de advocacia especializado em fornecer soluções jurídicas
+        rápidas, eficientes e personalizadas, atuando em todo o Brasil. Com uma
+        equipe composta por advogados especialistas e mestres em diversas áreas
+        do direito
+      </p>
+    </div>
+    <button
+      pButton
+      type="button"
+      label="Saiba mais"
+      routerLink="/servicos"
+      class="flex justify-content-center align-items-center gap-2 mt-5 p-3 btn-home"
+    >
+      <i class="pi pi-angle-right"></i>
+    </button>
+  </div>
+  <div class="container-card">
+    <div class="cards">
+      <i class="pi pi-home text-yellow-500 text-4xl"></i>
+      <h4>Direito da Família</h4>
+      <p>
+        Prestamos consultoria e representamos em processos de divórcio, guarda
+        de filhos, partilha de bens e pensão alimentícia, garantindo a proteção
+        dos direitos familiares.
+      </p>
+    </div>
+    <div class="cards">
+      <i class="pi pi-building text-yellow-500 text-4xl"></i>
+      <h4>Direito da Imobiliário</h4>
+      <p>
+        Oferecemos assessoria jurídica em compra, venda, locação e regularização
+        de imóveis, bem como em litígios relacionados a propriedades e contratos
+        imobiliários.
+      </p>
+    </div>
+    <div class="cards">
+      <i class="pi pi-building-columns text-yellow-500 text-4xl"></i>
+      <h4>Direito da Bancário</h4>
+      <p>
+        Fornecemos assessoria completa em contratos bancários, financiamentos,
+        empréstimos e questões relacionadas a instituições financeiras.
+      </p>
+    </div>
+    <div class="cards">
+      <i class="pi pi-user text-yellow-500 text-4xl"></i>
+      <h4>Direito da Previdenciário</h4>
+      <p>
+        Auxiliamos na obtenção de aposentadorias, pensões e benefícios, além de
+        atuar em revisões de benefícios e processos administrativos no INSS.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="count-container" >
+  <div class="count" #count>
+    <h4>{{ satisfactionCount + "%" }}</h4>
+    <p>Clientes Satisfeitos</p>
+  </div>
+  <div class="count" #count>
+    <h4>{{ "+" + successCount }}</h4>
+    <p>Casos de Sucesso</p>
+  </div>
+  <div class="count" #count>
+    <h4>{{ servicesCount }}</h4>
+    <p>Áreas do Direito</p>
+  </div>
+</div>
+
+<div class="flex justify-content-center align-items-center mt-8">
+  <h1 class="text-5xl">Conheça nossa linha de frente</h1>
+</div>
+<p-divider></p-divider>
+<div class="socios-container">
+  <div class="socios-card">
+    <div class="socios-image">
+      <img src="assets/junior (1).jpg" alt="about-image" />
+    </div>
+    <div class="socios-title">
+      <h3>Dr. Vandelson dos Santos</h3>
+      <p class="text-white">CEO e Fundador</p>
+      <P>Direito Previdênciario</P>
+      <div class="socios-media">
+        <a
+          href="https://www.instagram.com/vandelsonjr.adv/"
+          class="pi pi-instagram"
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/vandelson-dos-santos-5451ba17b/"
+          class="pi pi-linkedin"
+        ></a>
+        <a
+          href="https://www.facebook.com/vandelsonjr.adv"
+          class="pi pi-facebook"
+        ></a>
+        <a
+          href="https://api.whatsapp.com/send?phone=5511981918888"
+          class="pi pi-whatsapp"
+        ></a>
+      </div>
+    </div>
+  </div>
+  <div class="socios-card">
+    <div class="socios-image">
+      <img src="assets/elaine.jpg" alt="about-image" />
+    </div>
+    <div class="socios-title">
+      <h3>Dra. Elaine dos Santos</h3>
+      <p class="text-white">CEO e co-fundadora</p>
+      <p>Direito Imobiliário</p>
+      <div class="socios-media">
+        <a
+          href="https://www.instagram.com/elaine.santosadv/"
+          class="pi pi-instagram"
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/elaine-larissa-vitor-alves-santos/"
+          class="pi pi-linkedin"
+        ></a>
+        <a
+          href="https://www.facebook.com/vandelsonjr.adv"
+          class="pi pi-facebook"
+        ></a>
+        <a
+          href="https://api.whatsapp.com/send?phone=5511981918888"
+          class="pi pi-whatsapp"
+        ></a>
+      </div>
+    </div>
+  </div>
+  <div class="socios-card">
+    <div class="socios-image">
+      <img src="assets/jaate (4).jpg" alt="about-image" />
+    </div>
+    <div class="socios-title">
+      <h3>Dr. Jaate Lima</h3>
+      <p class="text-white">CEO</p>
+      <p>Direito Trabalhista</p>
+      <div class="socios-media">
+        <a
+          href="https://www.instagram.com/elaine.santosadv/"
+          class="pi pi-instagram"
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/dr-elaine-dos-santos/"
+          class="pi pi-linkedin"
+        ></a>
+        <a
+          href="https://www.facebook.com/vandelsonjr.adv"
+          class="pi pi-facebook"
+        ></a>
+        <a
+          href="https://api.whatsapp.com/send?phone=5511981918888"
+          class="pi pi-whatsapp"
+        ></a>
+      </div>
+    </div>
+  </div>
+  <div class="socios-card">
+    <div class="socios-image">
+      <img src="assets/cassia.png" alt="about-image" />
+    </div>
+    <div class="socios-title">
+      <h3>Dra. Cássia Cabral</h3>
+      <p class="text-white">CEO</p>
+      <p>Direito da Família e Sucessões</p>
+      <div class="socios-media">
+        <a
+          href="https://www.instagram.com/elaine.santosadv/"
+          class="pi pi-instagram"
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/dr-elaine-dos-santos/"
+          class="pi pi-linkedin"
+        ></a>
+        <a
+          href="https://www.facebook.com/vandelsonjr.adv"
+          class="pi pi-facebook"
+        ></a>
+        <a
+          href="https://api.whatsapp.com/send?phone=5511981918888"
+          class="pi pi-whatsapp"
+        ></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="flex justify-content-center align-items-center">
+  <button
+    pButton
+    type="button"
+    label="Saiba mais"
+    class="flex gap-2 h-2rem p-4 mt-4 bg-yellow-500 border-none hover:bg-yellow-600 text-white"
+    routerLink="/sobre"
+  >
+    <i class="pi pi-angle-right"></i>
+  </button>
+</div>
+
+<div
+  class="banner-mid flex flex-wrap justify-content-evenly align-items-center p-8 m-8 border-round-2xl"
+>
+  <div
+    class="flex flex-column justify-content-center align-items-start w-4 banner-width-mid"
+  >
+    <h2 class="text-white text-6xl">
+      Está precisando de
+      <strong class="text-yellow-500">auxílio jurídico</strong> personalizado?
+    </h2>
+    <button
+      pButton
+      type="button"
+      label="Fale com especialistas"
+      icon="pi pi-comment"
+      class="flex gap-2 h-2rem p-4 mt-4 bg-yellow-500 border-none hover:bg-yellow-600 text-white"
+      routerLink="/contato"
+    ></button>
+  </div>
+  <p-carousel
+    [value]="imagePairs"
+    [numVisible]="1"
+    [numScroll]="1"
+    [circular]="true"
+    [showIndicators]="false"
+    class="carousel"
+  >
+    <ng-template let-pair pTemplate="item">
+      <div class="image-pair-container">
+        <div class="image-container">
+          <img
+            [src]="pair.top.src"
+            [alt]="pair.top.alt"
+            class="carousel-image"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            [src]="pair.bottom.src"
+            [alt]="pair.bottom.alt"
+            class="carousel-image"
+          />
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>
+<!-- 
+<div
+  class="flex flex-column justify-content-center align-items-start bg-gray-100 mr-8 h-30rem"
+>
+  <div class="flex gap-8">
+    <h2>Confira nossas postagens recentes</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation
+    </p>
+  </div>
+  <p-carousel
+    [value]="blogImages"
+    [numVisible]="4"
+    [numScroll]="4"
+    [circular]="true"
+    [showIndicators]="false"
+  >
+    <ng-template let-image pTemplate="item">
+      <div class="flex flex-column justify-content-center gap-3 w-full">
+        <img [src]="image.src" [alt]="image.alt" class="carousel-image" />
+      </div>
+    </ng-template>
+  </p-carousel>
+</div> -->
+
+<div class="flex flex-column justify-content-center mt-8 mb-8">
+  <h2 class="text-5xl ml-8">Nosso escritório</h2>
+  <p-divider></p-divider>
+  <div class="division mb-5"></div>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15801.438684489818!2d-34.8961729!3d-8.0647471!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab192b893b11b5%3A0x69b3bc27f0b66fba!2sVandelson%20J%C3%BAnior%20Advogados%20%26%20Associados%20-%20Recife%20-%20PE!5e0!3m2!1sen!2sbr!4v1727752509075!5m2!1sen!2sbr"
+    class="w-full"
+    height="450"
+    style="border: 0"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>

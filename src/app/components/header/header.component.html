@@ -1,0 +1,117 @@
+<header
+  class="flex justify-content-between align-items-center p-3 pr-8 pl-8 fixed w-full z-5"
+  [ngClass]="{ 'bg-black': isScrolled }"
+>
+  <a href="/" class="logo-header" [ngClass]="{ 'logo-width': isScrolled }">
+    <img
+      src="assets/logos/logo-transparente-branca.png"
+      alt="logo do escritorio de advocacia vandelson junior"
+      class="logo1"
+    />
+    <img
+      src="assets/logos/logo.png"
+      alt="logo do escritorio de advocacia vandelson junior"
+      class="logo2"
+    />
+  </a>
+
+  <p-menubar [model]="areasDeAtuacaoMenu" class="menubar"></p-menubar>
+
+  <button class="hamburger" (click)="toggleSidebar()" [class.open]="isMenuOpen">
+    <svg viewBox="0 0 32 32">
+      <path
+        class="line line-top-bottom"
+        d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+      ></path>
+      <path class="line" d="M7 16 27 16"></path>
+    </svg>
+  </button>
+</header>
+
+<p-sidebar
+  #sidebar
+  [(visible)]="visibleSidebar"
+  position="right"
+  [baseZIndex]="10000"
+  [showCloseIcon]="false"
+  (onHide)="onSidebarHide()"
+  class="sidebar"
+>
+  <ng-template pTemplate="header">
+    <button class="hamburger open sidebar-close" (click)="toggleSidebar()">
+      <svg viewBox="0 0 32 32">
+        <path
+          class="line line-top-bottom"
+          d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+        ></path>
+        <path class="line" d="M7 16 27 16"></path>
+      </svg>
+    </button>
+  </ng-template>
+  <nav class="flex flex-column gap-3 p-5 pr-0">
+    <a
+      routerLink="/"
+      class="menu-link-side flex align-items-center gap-2"
+      (click)="toggleSidebar()"
+    >
+      <span>Página inicial</span>
+    </a>
+    <a
+      routerLink="/sobre"
+      class="menu-link-side flex align-items-center gap-2"
+      (click)="toggleSidebar()"
+    >
+      <span>Sobre nós</span>
+    </a>
+    <a
+      routerLink="/servicos"
+      class="menu-link-side flex align-items-center gap-2"
+      (click)="toggleSidebar()"
+    >
+      <span>Áreas de atuação</span>
+    </a>
+    <a
+      routerLink="/noticias"
+      class="menu-link-side flex align-items-center gap-2"
+      (click)="toggleSidebar()"
+    >
+      <span>Notícias</span>
+    </a>
+    <a
+      routerLink="/contato"
+      class="menu-link-side flex align-items-center gap-2"
+      (click)="toggleSidebar()"
+    >
+      <span>Contato</span>
+    </a>
+  </nav>
+
+  <div
+    class="divider-side flex justify-content-start align-items-center gap-4 pl-5"
+  >
+    <a
+      routerLink="https://api.whatsapp.com/send?phone=5511981918888"
+      class="social-side"
+    >
+      <i class="pi pi-whatsapp text-4xl"></i>
+    </a>
+    <a
+      routerLink="https://www.instagram.com/vandelsonjr.adv/"
+      class="social-side"
+    >
+      <i class="pi pi-instagram text-4xl"></i>
+    </a>
+    <a
+      routerLink="https://www.linkedin.com/in/vandelson-dos-santos-5451ba17b/"
+      class="social-side"
+    >
+      <i class="pi pi-linkedin text-4xl"></i>
+    </a>
+    <a
+      routerLink="https://www.facebook.com/vandelsonjr.adv"
+      class="social-side"
+    >
+      <i class="pi pi-facebook text-4xl"></i>
+    </a>
+  </div>
+</p-sidebar>

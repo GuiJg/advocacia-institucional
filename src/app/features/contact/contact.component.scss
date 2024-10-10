@@ -1,0 +1,189 @@
+.banner {
+  background-image: url("/assets/banner-contact.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 2px 2px 7px 0px #00000091;
+  height: 35rem;
+  padding: 10rem 0 7rem 0;
+}
+
+.title-service-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: #1e1e1e;
+  padding: 2rem 2rem 2rem 10rem;
+}
+
+.title-service-banner div {
+  width: 10rem;
+  height: 0.2rem;
+  background-color: #dba33b;
+}
+
+.title-service-banner h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+/* From Uiverse.io by mrhyddenn */
+.scrolldown {
+  --color: white;
+  --sizeX: 30px;
+  --sizeY: 50px;
+  position: relative;
+  width: var(--sizeX);
+  height: var(--sizeY);
+  margin-left: var(sizeX / 2);
+  border: calc(var(--sizeX) / 10) solid var(--color);
+  border-radius: 50px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  transform: translate(60rem, 5rem);
+  cursor: pointer;
+}
+
+.scrolldown::before {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: var(--color);
+  border-radius: 100%;
+  animation: scrolldown-anim 2s infinite;
+  box-sizing: border-box;
+  box-shadow: 0px -5px 3px 1px #2a547066;
+}
+
+@keyframes scrolldown-anim {
+  0% {
+    opacity: 0;
+    height: 6px;
+  }
+
+  40% {
+    opacity: 1;
+    height: 10px;
+  }
+
+  80% {
+    transform: translate(0, 20px);
+    height: 10px;
+    opacity: 0;
+  }
+
+  100% {
+    height: 3px;
+    opacity: 0;
+  }
+}
+
+.chevrons {
+  padding: 6px 0 0 0;
+  margin-left: -3px;
+  margin-top: 48px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chevrondown {
+  margin-top: -6px;
+  position: relative;
+  border: solid var(--color);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+}
+
+.chevrondown:nth-child(odd) {
+  animation: pulse54012 500ms ease infinite alternate;
+}
+
+.chevrondown:nth-child(even) {
+  animation: pulse54012 500ms ease infinite alternate 250ms;
+}
+
+@keyframes pulse54012 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.5;
+  }
+}
+
+.container-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  padding: 3rem;
+  margin: 5rem 5.2rem 1rem 0;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  z-index: 100;
+  opacity: 1;
+  background-color: #002145;
+  h1,
+  h2 {
+    font-size: 3rem;
+    color: #fff;
+  }
+
+  p {
+    margin: 1rem 0 1rem 0;
+    color: #fff;
+
+    strong {
+      color: #dba33b;
+    }
+  }
+}
+
+.container-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 50%;
+}
+
+::ng-deep .p-inputtext {
+  background: transparent;
+  border-bottom: 1px solid #ffff;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  color: #fff;
+
+  &:focus {
+    border-color: #dba33b;
+    box-shadow: 0 0 0 0 #00000033;
+  }
+}
+
+.btn-contact {
+  font-weight: 500;
+  background-color: #dba33b;
+  border: none;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #c8922e;
+  }
+}
+
+.banner-mid {
+  background-color: #002145;
+}

@@ -1,0 +1,131 @@
+<div class="banner flex flex-column justify-content-center align-items-start">
+  <div class="title-service-banner">
+    <h1 class="text-center text-white text-6xl title">
+      Entre em contato <strong>conosco</strong>
+      <div></div>
+    </h1>
+  </div>
+</div>
+
+<section class="container-contact">
+  <div class="container-form">
+    <h2>Formulário de contato</h2>
+    <p-divider></p-divider>
+    <form
+      action="https://formspree.io/f/xkgnwjkb"
+      method="POST"
+      class="flex flex-column gap-3 mt-6 p-fluid"
+    >
+      <div class="p-field p-grid pb-3">
+        <div class="p-col-12 p-md-10">
+          <span class="flex flex-column p-float-label">
+            <input
+              pInputText
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="w-12 p-2"
+            />
+            <label class="text-white" for="name">Nome*</label>
+          </span>
+        </div>
+      </div>
+      <div class="p-field p-grid pb-3">
+        <div class="p-col-12 p-md-10">
+          <span class="flex flex-column p-float-label">
+            <input
+              pInputText
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-12 p-2"
+            />
+            <label class="text-white" for="email">E-mail*</label>
+          </span>
+        </div>
+      </div>
+      <div class="p-field p-grid">
+        <div class="p-col-12 p-md-10">
+          <span class="flex flex-column p-float-label">
+            <textarea
+              pInputTextarea
+              id="message"
+              name="message"
+              rows="5"
+              cols="30"
+              autoResize
+              required
+              class="w-12"
+            ></textarea>
+            <label class="text-white" for="message">Mensagem*</label>
+          </span>
+        </div>
+      </div>
+      <div class="p-field p-grid">
+        <div class="p-col-12 p-md-10">
+          <p class="text-white">
+            Informamos que os seus dados pessoais inseridos neste campo, a
+            partir deste momento, são utilizados exclusivamente para retornar à
+            solicitação feita pelo titular de dados nos termos do artigo 7º,V,
+            da Lei nº 13.709/18 (LGPD).
+          </p>
+          <div class="p-field-checkbox">
+            <p-checkbox
+              binary
+              name="acceptPrivacy"
+              required
+              label="Aceito os termos de privacidade"
+              class="flex justify-content-start align-items-center gap-2 text-white"
+            ></p-checkbox>
+          </div>
+        </div>
+      </div>
+      <div class="p-field p-grid">
+        <div class="p-col-12 p-md-offset-2 p-md-10">
+          <button
+            pButton
+            type="submit"
+            label="Enviar formulário"
+            class="flex justify-content-center align-items-center gap-2 w-6 mt-5 p-3 btn-contact"
+          >
+            <i class="pi pi-send"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section>
+  <div
+    class="banner-mid flex flex-wrap justify-content-evenly align-items-center p-8 m-8 border-round-2xl"
+  >
+    <div
+      class="flex flex-column justify-content-center align-items-center w-12"
+    >
+      <h2 class="text-white text-center text-6xl">
+        Está precisando de
+        <strong class="text-yellow-500">auxílio jurídico</strong> personalizado?
+      </h2>
+      <button
+        pButton
+        type="button"
+        label="Fale com especialistas"
+        icon="pi pi-comment"
+        class="flex justify-content-center align-items-center gap-2 h-2rem p-4 mt-4 bg-yellow-500 border-none hover:bg-yellow-600 text-white font-bold"
+      ></button>
+    </div>
+  </div>
+</section>
+
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15801.438684489818!2d-34.8961729!3d-8.0647471!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab192b893b11b5%3A0x69b3bc27f0b66fba!2sVandelson%20J%C3%BAnior%20Advogados%20%26%20Associados%20-%20Recife%20-%20PE!5e0!3m2!1sen!2sbr!4v1727752509075!5m2!1sen!2sbr"
+  class="w-full mb-8"
+  height="450"
+  style="border: 0"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade"
+></iframe>

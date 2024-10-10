@@ -1,0 +1,14 @@
+<div class="whatsapp-container" [ngClass]="{ 'show-float': isScrolled }">
+  <div class="whatsapp-message" *ngIf="showMessage">
+    Fale com um de nossos advogados
+  </div>
+  <a
+    href="https://api.whatsapp.com/message/CATATL33TWC6I1?autoload=1&app_absent=0"
+    target="_blank"
+    class="whatsapp-button"
+    (mouseover)="showMessageBox()"
+    (mouseleave)="hideMessageBox()"
+  >
+    <i class="pi pi-whatsapp text-3xl"></i>
+  </a>
+</div>

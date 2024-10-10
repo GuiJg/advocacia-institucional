@@ -1,0 +1,299 @@
+.main-banner {
+  position: relative;
+}
+
+.main-banner video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  box-shadow: 1px 1px 5px 1px #00000087;
+  filter: brightness(80%);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* From Uiverse.io by mrhyddenn */
+.scrolldown {
+  --color: white;
+  --sizeX: 30px;
+  --sizeY: 50px;
+  position: relative;
+  width: var(--sizeX);
+  height: var(--sizeY);
+  margin-left: var(sizeX / 2);
+  border: calc(var(--sizeX) / 10) solid var(--color);
+  border-radius: 50px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  transform: translateY(-10rem);
+  cursor: pointer;
+}
+
+.scrolldown::before {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: var(--color);
+  border-radius: 100%;
+  animation: scrolldown-anim 2s infinite;
+  box-sizing: border-box;
+  box-shadow: 0px -5px 3px 1px #2a547066;
+}
+
+@keyframes scrolldown-anim {
+  0% {
+    opacity: 0;
+    height: 6px;
+  }
+
+  40% {
+    opacity: 1;
+    height: 10px;
+  }
+
+  80% {
+    transform: translate(0, 20px);
+    height: 10px;
+    opacity: 0;
+  }
+
+  100% {
+    height: 3px;
+    opacity: 0;
+  }
+}
+
+.chevrons {
+  padding: 6px 0 0 0;
+  margin-left: -3px;
+  margin-top: 48px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chevrondown {
+  margin-top: -6px;
+  position: relative;
+  border: solid var(--color);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+}
+
+.chevrondown:nth-child(odd) {
+  animation: pulse54012 500ms ease infinite alternate;
+}
+
+.chevrondown:nth-child(even) {
+  animation: pulse54012 500ms ease infinite alternate 250ms;
+}
+
+@keyframes pulse54012 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.5;
+  }
+}
+
+.container-image {
+  width: 150rem;
+}
+
+.about-image {
+  width: 40rem;
+  height: auto;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+}
+
+.services {
+  color: #fff;
+  background-color: #002145;
+}
+
+.btn-home {
+  font-weight: 500;
+  background-color: #dba33b;
+  border: none;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #c8922e;
+  }
+
+  i {
+    transition: 0.3s;
+  }
+
+  &:hover i {
+    transform: translateX(30%);
+  }
+}
+
+.container-card {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 50%;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0.7rem;
+  color: #000;
+  background-color: #ffff;
+  border-radius: 0.5rem;
+  width: 20rem;
+  padding: 2%;
+}
+
+.count-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  background-color: #d4a34a;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.count {
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.count p {
+  font-size: 2.5rem;
+  margin: 0;
+  transition: all 1s ease-in-out;
+}
+
+.count p:last-child {
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.socios-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.socios-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #dba33b;
+}
+
+.socios-card img {
+  width: 15rem;
+  height: 40rem;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.socios-card:hover img {
+  filter: brightness(0.5) blur(2px);
+  width: 20rem;
+}
+
+.socios-image {
+  display: flex;
+}
+
+.socios-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  color: #dba33b;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.socios-card:hover .socios-title {
+  opacity: 1;
+}
+
+.socios-title:hover {
+  opacity: 1;
+}
+
+.socios-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.socios-media a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #dba33b;
+  transition: 0.3s;
+}
+
+.socios-media a:hover {
+  color: #e7a732;
+  transform: translateY(-10%);
+}
+
+.banner-mid {
+  background-color: #002145;
+}
+
+.carousel-image {
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto;
+}
+:host ::ng-deep .p-carousel {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+:host ::ng-deep .p-carousel .p-carousel-content .p-carousel-item {
+  flex: 0 0 50%;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-pair-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
