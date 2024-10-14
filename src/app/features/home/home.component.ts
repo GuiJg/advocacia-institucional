@@ -73,12 +73,20 @@ export class HomeComponent implements OnInit, AfterViewInit {
         alt: 'comentario do Jonatas Lamartine sobre o escritório',
       },
       {
-        src: 'assets/feedback/Lucas Brenner.png',
-        alt: 'comentario do Lucas Brenner sobre o escritório',
+        src: 'assets/feedback/Elza Monteiro.png',
+        alt: 'comentario do Elza Monteiro sobre o escritório',
       },
       {
-        src: 'assets/feedback/Jonatas Lamartine.png',
-        alt: 'comentario do Jonatas Lamartine sobre o escritório',
+        src: 'assets/feedback/Jô Santos.png',
+        alt: 'comentario do Jô Santos sobre o escritório',
+      },
+      {
+        src: 'assets/feedback/Josinaldo Clauze.png',
+        alt: 'comentario do Josinaldo Clauze sobre o escritório',
+      },
+      {
+        src: 'assets/feedback/Rayan Victor.png',
+        alt: 'comentario do Rayan Victor sobre o escritório',
       },
     ];
 

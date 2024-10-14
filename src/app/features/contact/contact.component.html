@@ -11,11 +11,7 @@
   <div class="container-form">
     <h2>Formulário de contato</h2>
     <p-divider></p-divider>
-    <form
-      action="https://formspree.io/f/xkgnwjkb"
-      method="POST"
-      class="flex flex-column gap-3 mt-6 p-fluid"
-    >
+    <form [formGroup]="contactForm" (ngSubmit)="sendForm()" class="flex flex-column gap-3 mt-6 p-fluid">
       <div class="p-field p-grid pb-3">
         <div class="p-col-12 p-md-10">
           <span class="flex flex-column p-float-label">
@@ -23,7 +19,7 @@
               pInputText
               type="text"
               id="name"
-              name="name"
+              formControlName="name"
               required
               class="w-12 p-2"
             />
@@ -36,9 +32,25 @@
           <span class="flex flex-column p-float-label">
             <input
               pInputText
+              type="text"
+              id="phone"
+              formControlName="phone"
+              phoneMask
+              required
+              class="w-12 p-2"
+            />
+            <label class="text-white" for="phone">Telefone*</label>
+          </span>
+        </div>
+      </div>
+      <div class="p-field p-grid pb-3">
+        <div class="p-col-12 p-md-10">
+          <span class="flex flex-column p-float-label">
+            <input
+              pInputText
               type="email"
               id="email"
-              name="email"
+              formControlName="email"
               required
               class="w-12 p-2"
             />
@@ -52,7 +64,7 @@
             <textarea
               pInputTextarea
               id="message"
-              name="message"
+              formControlName="message"
               rows="5"
               cols="30"
               autoResize
@@ -74,7 +86,7 @@
           <div class="p-field-checkbox">
             <p-checkbox
               binary
-              name="acceptPrivacy"
+              formControlName="acceptPrivacy"
               required
               label="Aceito os termos de privacidade"
               class="flex justify-content-start align-items-center gap-2 text-white"
@@ -88,9 +100,10 @@
             pButton
             type="submit"
             label="Enviar formulário"
+            [disabled]="!contactForm.valid"
+            [loading]="isLoading"
             class="flex justify-content-center align-items-center gap-2 w-6 mt-5 p-3 btn-contact"
-          >
-            <i class="pi pi-send"></i>
+          >            <i class="pi pi-send"></i>
           </button>
         </div>
       </div>

@@ -29,7 +29,9 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { LoaderComponent } from './components/loader/loader.component';
 import { ProgressSpinnerModule } from 'primeng/progressspinner'; 
 import { DialogModule } from 'primeng/dialog';
-import { CommonModule } from '@angular/common';
+import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { provideHttpClient } from '@angular/common/http';
+import { PhoneMaskDirective } from './shared/utils/phone-mask.directive';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,7 @@ import { CommonModule } from '@angular/common';
     FooterComponent,
     MediasFloatComponent,
     LoaderComponent,
+    PhoneMaskDirective,
   ],
   imports: [
     BrowserModule,
@@ -68,7 +71,7 @@ import { CommonModule } from '@angular/common';
     ProgressSpinnerModule,
     DialogModule,
   ],
-  providers: [],
+  providers: [provideHttpClient(), { provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
