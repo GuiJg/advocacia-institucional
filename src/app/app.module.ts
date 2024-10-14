@@ -71,7 +71,7 @@ import { PhoneMaskDirective } from './shared/utils/phone-mask.directive';
     ProgressSpinnerModule,
     DialogModule,
   ],
-  providers: [provideHttpClient(), { provide: LocationStrategy, useClass: HashLocationStrategy }],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
